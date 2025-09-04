@@ -8,9 +8,13 @@ import java.util.Scanner;
 
 public class CarDealership {
     public static void main(String[] args) {
+        //Declare object
         Stock Dealership = new Stock();
+        
+        //Declare scanner
         Scanner Input = new Scanner(System.in);
-
+        
+        //Loop to validate menu choice
         while (true) {
             System.out.println("\n---- Car Dealership Menu ----");
             System.out.println("1. Add Stock");
@@ -29,6 +33,7 @@ public class CarDealership {
 
                 String Vin;
                 
+                //Validate VIN
                 while (true) {
                     System.out.print("Enter the unique car VIN (17 characters): ");
                     Vin = Input.nextLine();
@@ -42,6 +47,7 @@ public class CarDealership {
 
                 double Price;
                 
+                //Validate price
                 while (true) {
                     System.out.print("Enter the selling price: ");
                     String PriceStr = Input.nextLine();
@@ -56,6 +62,7 @@ public class CarDealership {
 
                 int Quantity;
                 
+                //Validate quantity
                 while (true) {
                     System.out.print("Enter the quantity: ");
                     String QuantityStr = Input.nextLine();

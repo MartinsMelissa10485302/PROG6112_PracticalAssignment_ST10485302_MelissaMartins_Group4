@@ -4,15 +4,19 @@
  */
 package com.mycompany.progpracticalassignment.SectionB;
 
+//Used in inheritance
 public abstract class Vehicles {
+    //Varibales - cannot be overwritten
     private final String Vin;
     private final double Price;
 
+    //Constructor
     public Vehicles(String Vin, double Price) {
         this.Vin = Vin;
         this.Price = Price;
     }
 
+    //Public getter methods
     public String GetVin() {
         return Vin;
     }

@@ -8,13 +8,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StockTest {
+    //Test for valid price - pass
     @Test
     public void testValidPricePass() {
         Stock StockTest = new Stock();
         
         assertTrue(StockTest.ValidPrice("1928910.99"));
     }
-
+    
+    //Test for valid price - fail
     @Test
     public void testValidPriceFail() {
         Stock StockTest = new Stock();
@@ -22,6 +24,7 @@ public class StockTest {
         assertFalse(StockTest.ValidPrice("12.3.4"));  
     }
 
+    //Test for valid quantity - pass
     @Test
     public void testValidQuantityPass() {
         Stock StockTest = new Stock();
@@ -29,6 +32,7 @@ public class StockTest {
         assertTrue(StockTest.ValidQuantity("10"));
     }
 
+    //Test for valid quantity - fail
     @Test
     public void testValidQuantityFail() {
         Stock StockTest = new Stock();
@@ -36,6 +40,7 @@ public class StockTest {
         assertFalse(StockTest.ValidQuantity("-2"));   
     }
 
+    //Add stock - pass
     @Test
     public void testAddStockNewCarPass() {
         Stock StockTest = new Stock();
@@ -46,6 +51,7 @@ public class StockTest {
         assertTrue(true);
     }
 
+    //Add stock - fail
     @Test
     public void testAddStockFail() {
         Stock StockTest = new Stock();
@@ -55,6 +61,7 @@ public class StockTest {
         assertTrue(true); 
     }
 
+    //Sell stock - pass
     @Test
     public void testSellCarPass() {
         Stock StockTest = new Stock();
@@ -64,6 +71,7 @@ public class StockTest {
         assertTrue(true);
     }
 
+    //Sell stock - fail
     @Test
     public void testSellCarNotFound() {
         Stock StockTest = new Stock();
@@ -73,6 +81,7 @@ public class StockTest {
         assertTrue(true); 
     }
 
+    //Sell car - out of stock
     @Test
     public void testSellCarOutOfStock() {
         Stock StockTest = new Stock();

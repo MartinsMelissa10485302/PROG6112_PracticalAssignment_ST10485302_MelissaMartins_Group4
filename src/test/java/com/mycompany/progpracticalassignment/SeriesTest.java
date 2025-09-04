@@ -8,6 +8,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SeriesTest {
+    //Test series found - pass
     @Test
     void testSearchSeries() {
         Series Show = new Series();
@@ -24,6 +25,7 @@ class SeriesTest {
         assertEquals("60", Show.SeriesNumOfEpisodes.get(Index));
     }
 
+    //Test series found - fail
     @Test
     void testSearchSeries_SeriesNotFound() {
         Series Show = new Series();
@@ -33,6 +35,7 @@ class SeriesTest {
         assertEquals(-1, Index);
     }
 
+    //Test delete series - pass
     @Test
     void testDeleteSeries() {
         Series Show = new Series();
@@ -55,6 +58,7 @@ class SeriesTest {
         assertFalse(Show.SeriesNumOfEpisodes.contains("236"));
     }
 
+    //Test delete series - fail
     @Test
     void testDeleteSeries_SeriesNotFound() {
         Series Show = new Series();
@@ -64,6 +68,7 @@ class SeriesTest {
         assertEquals(-1, Index);
     }
 
+    //Test update series - pass
     @Test
     void testUpdateSeries() {
         Series Show = new Series();
@@ -86,6 +91,7 @@ class SeriesTest {
         assertEquals("400", Show.SeriesNumOfEpisodes.get(Index));
     }
 
+    //Test age restriction - pass
     @Test
     void testSeriesAgeRestriction_AgeValid() {
         String ValidAge = "15";
@@ -96,6 +102,7 @@ class SeriesTest {
         assertTrue(IsValidDigit && IsValidFormat);
     }
 
+    //Test age restriction - fail
     @Test
     void testSeriesAgeRestriction_AgeInvalid() {
         String InvalidAgeStr = "Ten";

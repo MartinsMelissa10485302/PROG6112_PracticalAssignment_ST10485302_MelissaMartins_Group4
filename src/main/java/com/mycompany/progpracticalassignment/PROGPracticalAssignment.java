@@ -39,7 +39,7 @@ public class PROGPracticalAssignment {
             } else {
                 return;
             }
-            
+           //Validate invalid menu option
             while (true) {
                 MenuItem = Input.nextLine();
 

@@ -4,12 +4,15 @@
  */
 package com.mycompany.progpracticalassignment.SectionB;
 
+//Used for inhertance
 public class Cars extends Vehicles {
+    //Variables
     private final String Make;
     private final String Model;
     private int Quantity;
     private int SoldCount;
-
+    
+    //Constructor
     public Cars(String Vin, String Make, String Model, double Price, int Quantity) {
         super (Vin, Price);
         this.Make = Make;
@@ -18,10 +21,12 @@ public class Cars extends Vehicles {
         this.SoldCount = 0;
     }
 
+    //Validate VIN
     public static boolean ValidVin(String Vin) {
         return (Vin != null) && (Vin.length() == 17);
     }
 
+    //Getter methods
     public String GetMake() { 
         return Make; 
     }
